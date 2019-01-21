@@ -4,7 +4,6 @@ import Button from './Button'
 const Card = (props) => {
 
   return (
-    // <div className="container ">
     <div className="card col-sm-8 mx-2 my-2">
       <img className="card-img-top" src={`${props.image}`} alt="Card image cap"></img>
       <div className="card-body">
@@ -16,14 +15,15 @@ const Card = (props) => {
           <li className="list-group-item">{`Character Story: ${props.characterArc}`}</li>
         </ul>
       </div>
-      {props.tags.map((tag, idx) => {
-        return <Button
-          key={idx}
-          tag={tag}
-        />
-      })}
-    </div>
-    // </div>
+      {
+        props.tags.map((tag, idx) => {
+          return <Button
+            key={idx}
+            tag={tag}
+          />
+        })
+      }
+    </div >
   )
 }
 

@@ -74,7 +74,6 @@ class App extends Component {
               </div>
             </div>
           </div>
-          {/* // <div className="container-fluid"> */}
           <div id="card" className="col-6 justify-content-center">
             {this.state.charExist
               ? <Card
