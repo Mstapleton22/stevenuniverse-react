@@ -4,8 +4,9 @@ import Button from './Button'
 const Card = (props) => {
 
   return (
-    <div className="card col-sm-4 mx-2 my-2">
-      {/* <img className="card-img-top" src="..." alt="Card image cap"></img> */}
+    // <div className="container ">
+    <div className="card col-sm-8 mx-2 my-2">
+      <img className="card-img-top" src={`${props.image}`} alt="Card image cap"></img>
       <div className="card-body">
         <h5 className="card-title">{props.name}</h5>
         <ul className="list-group list-group-flush">
@@ -22,6 +23,7 @@ const Card = (props) => {
         />
       })}
     </div>
+    // </div>
   )
 }
 

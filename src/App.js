@@ -10,6 +10,7 @@ class App extends Component {
     this.state = {
       characters: [],
       charExist: false,
+      image: '',
       name: '',
       gem: '',
       ability: '',
@@ -28,6 +29,7 @@ class App extends Component {
     const randomChar = this.state.characters[randomIndex]
     this.setState({
       charExist: true,
+      image: randomChar.image,
       name: randomChar.name,
       gem: randomChar.gem,
       fusionForm: randomChar.fusionForm,
@@ -62,24 +64,30 @@ class App extends Component {
             </li>
           </ul>
         </div>
-        <div className="row justify-content-center py-5">
-          <div className="col-8 text-center">
-            <h1 className="pb-2">Steven Stars!</h1>
-            <p className="pb-2">An app for randomly generating characters from the Steven Universe.</p>
-            <button className="btn btn-danger btn-lg" onClick={this.generateChar}>Press Me</button>
+        <div className="row">
+          <div className="col-6 text-center">
+            <div className="row justify-content-center py-5">
+              <div className="text-center">
+                <h1 className="mt-5 pr-5 pb-2">Steven Stars!</h1>
+                <p className="pb-2">An app for randomly generating characters from the Steven Universe.</p>
+                <button className="btn btn-star btn-lg" onClick={this.generateChar}>Press Me</button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="row justify-content-center">
-          {this.state.charExist
-            ? <Card
-              name={this.state.name}
-              gem={this.state.gem}
-              ability={this.state.ability}
-              fusionForm={this.state.fusionForm}
-              characterArc={this.state.characterArc}
-              tags={this.state.tags}
-            />
-            : ''}
+          {/* // <div className="container-fluid"> */}
+          <div id="card" className="col-6 justify-content-center">
+            {this.state.charExist
+              ? <Card
+                image={this.state.image}
+                name={this.state.name}
+                gem={this.state.gem}
+                ability={this.state.ability}
+                fusionForm={this.state.fusionForm}
+                characterArc={this.state.characterArc}
+                tags={this.state.tags}
+              />
+              : ''}
+          </div>
         </div>
       </div>
     );
