@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+// import Steven_Quartz_Universe from '../assets/Steven_Quartz_Universe.png';
+// import assetsFolder from './assets'
 import Button from './Button'
 
 const Card = (props) => {
-
+  console.log(props.image)
   return (
-    <div className="card col-sm-8 mx-2 my-2">
-      <img className="card-img-top" src={`${props.image}`} alt="Card image cap"></img>
+    <div className="card col-sm-12 mx-2 my-2">
+      <img className="card-img-top ml-5 mr-0 w-50 h-50" src={props.image} alt="Card image cap"></img>
       <div className="card-body">
         <h5 className="card-title">{props.name}</h5>
         <ul className="list-group list-group-flush">

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Card from './components/Card';
-import Button from './components/Button'
+
+// import Background from "https://i.ytimg.com/vi/Q2gFfuy2W7s/maxresdefault.jpg";
+
 import './App.css';
 
 class App extends Component {
@@ -53,7 +55,7 @@ class App extends Component {
   render() {
     console.log(this.generateChar)
     return (
-      <div className="container-fluid">
+      <div className="container-fluid background-image">
         <div className="row navbar justify-content-end pb-5">
           <ul className="nav">
             <li className="nav-item">
@@ -64,13 +66,14 @@ class App extends Component {
             </li>
           </ul>
         </div>
+        {/* <div className="background-image"> */}
         <div className="row">
           <div className="col-6 text-center">
             <div className="row justify-content-center py-5">
               <div className="text-center">
-                <h1 className="mt-5 pr-5 pb-2">Steven Stars!</h1>
-                <p className="pb-2">An app for randomly generating characters from the Steven Universe.</p>
-                <button className="btn btn-star btn-lg" onClick={this.generateChar}>Press Me</button>
+                <h1 className="header mt-5 pr-5 pb-2">Steven Stars!</h1>
+                <p className="header pb-2">An app for randomly generating characters from the Steven Universe.</p>
+                <button className="btn btn-lg star" onClick={this.generateChar}><img src="https://avatanplus.com/files/resources/mid/595a59287a10415d08ec4634.png"></img></button>
               </div>
             </div>
           </div>
@@ -88,7 +91,8 @@ class App extends Component {
               : ''}
           </div>
         </div>
-      </div>
+        {/* </div> */}
+      </div >
     );
   }
 }
