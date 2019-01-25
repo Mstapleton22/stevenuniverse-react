@@ -73,7 +73,7 @@ class App extends Component {
               <div className="text-center">
                 <h1 className="header mt-5 pr-5 pb-2">Steven Stars!</h1>
                 <p className="header pb-2">An app for randomly generating characters from the Steven Universe.</p>
-                <button className="btn btn-lg star" onClick={this.generateChar}><img src="https://avatanplus.com/files/resources/mid/595a59287a10415d08ec4634.png"></img></button>
+                <button className="btn btn-lg star btnstar" onClick={this.generateChar}><img src={this.state.image || "https://avatanplus.com/files/resources/mid/595a59287a10415d08ec4634.png"}></img></button>
               </div>
             </div>
           </div>
