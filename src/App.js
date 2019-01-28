@@ -53,7 +53,7 @@ class App extends Component {
 
 
   render() {
-    console.log(this.generateChar)
+    console.log(window.location)
     return (
       <div className="container-fluid background-image">
         <div className="row navbar justify-content-end pb-5">

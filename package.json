@@ -2,6 +2,7 @@
   "name": "steven-universe-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://steven-universe-characters.firebaseapp.com/",
   "dependencies": {
     "bootstrap": "^4.2.1",
     "react": "^16.7.0",
